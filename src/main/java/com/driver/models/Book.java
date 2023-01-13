@@ -11,9 +11,7 @@ import java.util.List;
 
 
 @Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+
 
 public class Book {
 
@@ -44,5 +42,46 @@ public class Book {
     @JsonIgnoreProperties("book")
     private List<Transaction> transactions;
 
+    public Book() {
+    }
+
+    public Book(String name, Genre genre, Author author, Card card) {
+        this.name = name;
+        this.genre = genre;
+        this.author = author;
+        this.card = card;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public Card getCard() {
+        return card;
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
+    }
 }
 
