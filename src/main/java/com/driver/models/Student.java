@@ -10,8 +10,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Data
-@AllArgsConstructor
+
 
 public class Student {
 
